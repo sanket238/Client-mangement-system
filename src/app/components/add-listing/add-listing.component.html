@@ -1,0 +1,50 @@
+<a [routerLink]="['/listings']">Back</a>
+<br/>
+<h2 class="page-header">Add User</h2>
+<form (submit)="onAddSubmit()">
+	<div class="form-group">
+		<label>FirstName</label>
+		<input class="form-control" type="text" name="firstname" [(ngModel)]="firstname" required>
+	</div>
+	<div class="form-group">
+		<label>LastName</label>
+		<input class="form-control" type="text" name="lastname" [(ngModel)]="lastname" required="">
+	</div>
+	<div class="form-group">
+		<label>Email</label>
+		<input class="form-control" type="text" name="email" [(ngModel)]="email" required>
+	</div>
+	<div class="form-group">
+		<label>BusinessName</label>
+		<input class="form-control" type="text" name="businessname" [(ngModel)]="businessname" required>
+	</div>
+	<div class="form-group">
+		<label>Phonenumber</label>
+		<input class="form-control" type="number" name="phoneno" [(ngModel)]="phoneno" required> 
+	</div>
+	<div class="form-group">
+		<label>Bank Account no</label>
+		<input class="form-control" type="number" name="bankaccno" [(ngModel)]="bankaccno">
+	</div>
+	<div class="form-group">
+		<label>Address</label>
+		<input class="form-control" type="text" name="street1" [(ngModel)]="street1" placeholder="street1">
+		<input class="form-control" type="text" name="street2" [(ngModel)]="street2" placeholder="stree2">
+		<input class="form-control" type="text" name="city" [(ngModel)]="city" required placeholder="city">
+		<input class="form-control" type="text" name="state" [(ngModel)]="state" placeholder="state">
+		<input class="form-control" type="text" name="country" [(ngModel)]="country" placeholder="country">
+		<input class="form-control" type="number" name="pincode" [(ngModel)]="pincode" placeholder="pincode">
+	</div>
+	<div class="form-group">
+		<label>Status</label>
+		<select name="status" class="form-control" type="text" [(ngModel)]="status">
+			
+			<option value="active">Active</option>
+			<option value="passive">Passive</option>
+			<option value="pipeline">Pipeline</option>
+			<option value="prospect">Prospect</option>
+
+		</select>
+	</div>
+	<input type="submit" value="submit" class="btn btn-success">
+</form>

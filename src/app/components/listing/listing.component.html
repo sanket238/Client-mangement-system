@@ -1,0 +1,19 @@
+<div *ngIf="listing">
+    <a [routerLink]="['/listings']">Go Back</a>
+    <br>
+    <h2 class="page-header">{{listing.firstname}}  {{listing.lastname}} <!-- <small>{{listing.city}}</small> --></h2>
+    <div class="row">
+      
+      <div>
+        <ul class="list-group">
+          <li class="list-group-item">Name: {{listing.firstname}}  {{listing.lastname}}</li>
+          <li class="list-group-item">Email: {{listing.email}}</li>
+          <li class="list-group-item">Phone: {{listing.phoneno}}</li>
+          <li class="list-group-item">City: {{listing.city}}</li>
+        </ul>
+      </div>
+      <a class="btn btn-default" [routerLink]="['/edit-listing/' +listing.$key]">Edit</a>
+      <a (click)="onDeleteClick()" class="btn btn-danger">Delete</a>
+    </div>
+
+  </div>
