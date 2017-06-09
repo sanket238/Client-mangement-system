@@ -1,5 +1,138 @@
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let listing of listings">
-    <a [routerLink]="['/listing/'+listing.$key]">{{listing.firstname}}</a>
-  </li>
-</ul>
+<div class="container main-content">
+	<table class="table table-bordered">
+		<tr >
+			<th colspan="7">Based on status:Active</th>
+
+		</tr>
+		<tr>
+			<th>#</th>
+			<th>Name</th>
+			<th>Email</th>
+			
+			
+		</tr>
+		<tr *ngFor="let listing of listings; let i=index ">
+			
+			
+				<td *ngIf="listing.status =='active'">{{i}}</td>
+				<td *ngIf="listing.status =='active'"><a [routerLink]="['/listing/'+listing.$key]">{{listing.firstname}} {{listing.lastname}}</a></td>
+
+				<td *ngIf="listing.status =='active'"><a [routerLink]="['/listing/'+listing.$key]">{{listing.email}}</a></td>
+
+				
+				
+				
+	     		
+	     	
+			
+		</tr>
+
+	</table>
+
+<br><br>
+
+<table class="table table-bordered">
+		<tr >
+			<th colspan="7">Based on status:Pipeline</th>
+
+		</tr>
+		<tr>
+			<th>#</th>
+			<th>Name</th>
+			<th>Email</th>
+			
+			
+		</tr>
+		<tr *ngFor="let listing of listings; let i=index ">
+			
+			
+				<td *ngIf="listing.status =='pipeline'">{{i}}</td>
+				<td *ngIf="listing.status =='pipeline'"><a [routerLink]="['/listing/'+listing.$key]">{{listing.firstname}} {{listing.lastname}}</a></td>
+
+				<td *ngIf="listing.status =='pipeline'"><a [routerLink]="['/listing/'+listing.$key]">{{listing.email}}</a></td>
+
+				
+				
+				
+	     		
+	     	
+			
+		</tr>
+
+	</table>
+
+<br><br>
+
+	<table class="table table-bordered">
+		<tr >
+			<th colspan="7">Based on status:Passive</th>
+
+		</tr>
+		<tr>
+			<th>#</th>
+			<th>Name</th>
+			<th>Email</th>
+			
+		</tr>
+		<tr *ngFor="let listing of listings; let i=index ">
+			
+			
+				<td *ngIf="listing.status =='passive'">{{i}}</td>
+				<td *ngIf="listing.status =='passive'"><a [routerLink]="['/listing/'+listing.$key]">{{listing.firstname}} {{listing.lastname}}</a></td>
+
+				<td *ngIf="listing.status =='passive'"><a [routerLink]="['/listing/'+listing.$key]">{{listing.email}}</a></td>
+
+				
+				
+				
+	     		
+	     	
+			
+		</tr>
+
+	</table>
+
+<br><br>
+		<table class="table table-bordered">
+		<tr>
+			<th colspan="7">Total no of Users</th>
+		</tr>
+		<tr>
+			<th>#</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Business Name</th>
+			<th>City</th>
+			<th>PhoneNo</th>
+			<th>Actions</th>
+		</tr>
+		<tr *ngFor="let listing of listings; let i=index ">
+		
+			<td>{{i}}</td>
+			<td><a [routerLink]="['/listing/'+listing.$key]">{{listing.firstname}} {{listing.lastname}}</a></td>
+
+			<td><a [routerLink]="['/listing/'+listing.$key]">{{listing.email}}</a></td>
+
+			<td><a [routerLink]="['/listing/'+listing.$key]">{{listing.businessname}}</a></td>
+
+			<td><a [routerLink]="['/listing/'+listing.$key]">{{listing.city}}</a></td>
+
+			<td><a [routerLink]="['/listing/'+listing.$key]">{{listing.phoneno}}</a></td>
+
+			<td><a class="btn btn-default" [routerLink]="['/edit-listing/' +listing.$key]">Edit</a>
+			
+     		</td>
+			
+		</tr>
+
+	</table>
+	
+</div>
+
+
+
+
+
+
+
+
