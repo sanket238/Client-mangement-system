@@ -1,7 +1,45 @@
-<div class="jumbotron text-center">
+<div class="jumbotron text-center" *ngIf="!(af.auth | async)">
   <div class="container">
     <h1>Customer Data</h1>
     <p>Customer data is here </p>
     <a (click)="login()"><img src="assets/img/google.png"></a>
   </div>
 </div>
+
+<div class="container main-content">
+	<table class="table table-bordered">
+		<tr>
+			<th colspan="7">Total no of Users</th>
+		</tr>
+		<tr>
+			<th>#</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Business Name</th>
+			<th>City</th>
+			<th>PhoneNo</th>
+			<th>Actions</th>
+		</tr>
+		<tr *ngFor="let listing of listings; let i=index ">
+		
+			<td>{{i}}</td>
+			<td><a [routerLink]="['/listing/'+listing.$key]">{{listing.firstname}} {{listing.lastname}}</a></td>
+
+			<td><a [routerLink]="['/listing/'+listing.$key]">{{listing.email}}</a></td>
+
+			<td><a [routerLink]="['/listing/'+listing.$key]">{{listing.businessname}}</a></td>
+
+			<td><a [routerLink]="['/listing/'+listing.$key]">{{listing.city}}</a></td>
+
+			<td><a [routerLink]="['/listing/'+listing.$key]">{{listing.phoneno}}</a></td>
+
+			<td><a class="btn btn-default" [routerLink]="['/edit-listing/' +listing.$key]">Edit</a>
+			
+     		</td>
+			
+		</tr>
+
+	</table>
+	
+</div>		
+
