@@ -1,55 +1,5 @@
 webpackJsonp([1,4],{
 
-/***/ 109:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2__ = __webpack_require__(159);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FirebaseService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var FirebaseService = (function () {
-    function FirebaseService(af) {
-        this.af = af;
-        this.listings = this.af.database.list('/listings');
-    }
-    FirebaseService.prototype.getListings = function () {
-        return this.listings;
-    };
-    FirebaseService.prototype.getListingDetails = function (id) {
-        this.listing = this.af.database.object('/listings/' + id);
-        return this.listing;
-    };
-    FirebaseService.prototype.addListing = function (listing) {
-        return this.listings.push(listing);
-    };
-    FirebaseService.prototype.updateListing = function (id, listing) {
-        return this.listings.update(id, listing);
-    };
-    FirebaseService.prototype.deleteListing = function (id) {
-        return this.listings.remove(id);
-    };
-    FirebaseService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2__["d" /* AngularFire */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_angularfire2__["d" /* AngularFire */]) === 'function' && _a) || Object])
-    ], FirebaseService);
-    return FirebaseService;
-    var _a;
-}());
-//# sourceMappingURL=D:/project/firebase/src/firebase.service.js.map
-
-/***/ }),
-
 /***/ 399:
 /***/ (function(module, exports) {
 
@@ -127,9 +77,9 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(478);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(484);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_firebase_service__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_firebase_service__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_flash_messages__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angular2_flash_messages__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(518);
@@ -224,8 +174,8 @@ var AppModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_firebase_service__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_firebase_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(81);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddListingComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -285,8 +235,8 @@ var AddListingComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_firebase_service__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_firebase_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(81);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditListingComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -367,6 +317,8 @@ var EditListingComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_firebase_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(81);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -380,12 +332,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var HomeComponent = (function () {
-    function HomeComponent(af, flashMessage) {
+    function HomeComponent(firebaseService, router, route, af, flashMessage) {
+        this.firebaseService = firebaseService;
+        this.router = router;
+        this.route = route;
         this.af = af;
         this.flashMessage = flashMessage;
     }
     HomeComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.firebaseService.getListings().subscribe(function (listings) {
+            console.log(listings);
+            _this.listings = listings;
+        });
     };
     HomeComponent.prototype.login = function () {
         this.af.auth.login();
@@ -396,10 +358,10 @@ var HomeComponent = (function () {
             template: __webpack_require__(708),
             styles: [__webpack_require__(701)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2__["d" /* AngularFire */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_angularfire2__["d" /* AngularFire */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_firebase_service__["a" /* FirebaseService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_firebase_service__["a" /* FirebaseService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2__["d" /* AngularFire */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_angularfire2__["d" /* AngularFire */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _e) || Object])
     ], HomeComponent);
     return HomeComponent;
-    var _a, _b;
+    var _a, _b, _c, _d, _e;
 }());
 //# sourceMappingURL=D:/project/firebase/src/home.component.js.map
 
@@ -410,8 +372,8 @@ var HomeComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_firebase_service__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_firebase_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(81);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListingComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -464,8 +426,8 @@ var ListingComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_firebase_service__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_firebase_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(81);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListingsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -690,7 +652,7 @@ module.exports = ""
 /***/ 701:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "a:link{\r\n\ttext-decoration:none;\r\n}\r\nth{\r\n\ttext-align:center;\r\n}"
 
 /***/ }),
 
@@ -739,7 +701,7 @@ module.exports = "<a [routerLink]=\"['/listings']\">Back</a>\n<br/>\n<h2 class=\
 /***/ 708:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <div class=\"container\">\n    <h1>Customer Data</h1>\n    <p>Customer data is here </p>\n    <a (click)=\"login()\"><img src=\"assets/img/google.png\"></a>\n  </div>\n</div>\n"
+module.exports = "<div class=\"jumbotron text-center\" *ngIf=\"!(af.auth | async)\">\n  <div class=\"container\" >\n    <h1>Customer Data</h1>\n    <p>Customer data is here </p>\n    <a (click)=\"login()\"><img src=\"assets/img/google.png\"></a>\n  </div>\n</div>\n\n<div class=\"container main-content\">\n\t<table class=\"table table-bordered\">\n\t\t<tr>\n\t\t\t<th colspan=\"7\">Total no of Users</th>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<th>#</th>\n\t\t\t<th>Name</th>\n\t\t\t<th>Email</th>\n\t\t\t<th>Business Name</th>\n\t\t\t<th>City</th>\n\t\t\t<th>PhoneNo</th>\n\t\t\t<th>Actions</th>\n\t\t</tr>\n\t\t<tr *ngFor=\"let listing of listings; let i=index \">\n\t\t\n\t\t\t<td>{{i}}</td>\n\t\t\t<td><a [routerLink]=\"['/listing/'+listing.$key]\">{{listing.firstname}} {{listing.lastname}}</a></td>\n\n\t\t\t<td><a [routerLink]=\"['/listing/'+listing.$key]\">{{listing.email}}</a></td>\n\n\t\t\t<td><a [routerLink]=\"['/listing/'+listing.$key]\">{{listing.businessname}}</a></td>\n\n\t\t\t<td><a [routerLink]=\"['/listing/'+listing.$key]\">{{listing.city}}</a></td>\n\n\t\t\t<td><a [routerLink]=\"['/listing/'+listing.$key]\">{{listing.phoneno}}</a></td>\n\n\t\t\t<td><a class=\"btn btn-default\" [routerLink]=\"['/edit-listing/' +listing.$key]\">Edit</a>\n\t\t\t\n     \t\t</td>\n\t\t\t\n\t\t</tr>\n\n\t</table>\n\t\n</div>\t\t\n"
 
 /***/ }),
 
@@ -769,6 +731,56 @@ module.exports = "<nav class=\"navbar navbar-inverse\">\n      <div class=\"cont
 
 module.exports = __webpack_require__(400);
 
+
+/***/ }),
+
+/***/ 83:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2__ = __webpack_require__(159);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FirebaseService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var FirebaseService = (function () {
+    function FirebaseService(af) {
+        this.af = af;
+        this.listings = this.af.database.list('/listings');
+    }
+    FirebaseService.prototype.getListings = function () {
+        return this.listings;
+    };
+    FirebaseService.prototype.getListingDetails = function (id) {
+        this.listing = this.af.database.object('/listings/' + id);
+        return this.listing;
+    };
+    FirebaseService.prototype.addListing = function (listing) {
+        return this.listings.push(listing);
+    };
+    FirebaseService.prototype.updateListing = function (id, listing) {
+        return this.listings.update(id, listing);
+    };
+    FirebaseService.prototype.deleteListing = function (id) {
+        return this.listings.remove(id);
+    };
+    FirebaseService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2__["d" /* AngularFire */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_angularfire2__["d" /* AngularFire */]) === 'function' && _a) || Object])
+    ], FirebaseService);
+    return FirebaseService;
+    var _a;
+}());
+//# sourceMappingURL=D:/project/firebase/src/firebase.service.js.map
 
 /***/ })
 
