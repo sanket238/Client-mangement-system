@@ -1,5 +1,5 @@
 
-##Client-Management-System
+## Client-Management-System
 
 This is the standard Client-Management-System . To view a version of the application that has custom routing  visit https://github.com/sanket238/Client-mangement-system. This application demonstrates:
 
@@ -12,7 +12,7 @@ This is the standard Client-Management-System . To view a version of the applica
 
 This app is made in angularjs2 with the use of anuglarcli version 1.0.0-beta
 
-###Requirements:
+### Requirements:
 
 
 
