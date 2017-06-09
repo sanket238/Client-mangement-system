@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<div class="container main-content">
+<div class="container main-content" *ngIf="(af.auth | async)">
 	<table class="table table-bordered">
 		<tr>
 			<th colspan="7">Total no of Users</th>
