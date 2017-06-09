@@ -3,10 +3,10 @@
 
 This is the standard Client-Management-System . To view a version of the application that has custom routing  visit https://github.com/sanket238/Client-mangement-system. This application demonstrates:
 
-1.A complete application with read-only and editable data.
-2.Using  firebase Api to get the data.
-3.Provides login and authentication functionality.
-4.Separate pages for add, edit and view client.
+1. A complete application with read-only and editable data.
+2. Using  firebase Api to get the data.
+3. Provides login and authentication functionality.
+4. Separate pages for add, edit and view client.
 
 
 
